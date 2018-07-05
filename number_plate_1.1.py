@@ -9,7 +9,7 @@ edges = cv2.Canny(img,200,200)
 contours, heirarchy = cv2.findContours(edges,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 for cnt in contours:
     area = cv2.contourArea(cnt)
-    if(area > 1000):
+    if(area > 900):
         x,y,w,h = cv2.boundingRect(cnt)
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
 
